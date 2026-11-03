@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>비플페이 식당 지도</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body>
+  <header class="bar">
+    <form id="search" class="search" autocomplete="off">
+      <input id="q" name="q" type="search" placeholder="구획 이름 (예: 대구 동성로)" required />
+      <button type="submit">찾기</button>
+    </form>
+    <div id="summary" class="summary" hidden></div>
+  </header>
+
+  <div id="map"></div>
+
+  <div id="status" class="toast" hidden></div>
+
+  <ul id="candidates" class="sheet candidates" hidden></ul>
+
+  <section id="detail" class="sheet" hidden>
+    <button class="close" type="button" aria-label="닫기">×</button>
+    <h2 id="d-name"></h2>
+    <p id="d-cat" class="muted"></p>
+    <p id="d-addr" class="muted"></p>
+    <p id="d-state" class="state"></p>
+    <div class="actions">
+      <button type="button" class="yes" data-status="yes">비플페이 가능</button>
+      <button type="button" class="no" data-status="no">비플페이 불가능</button>
+    </div>
+  </section>
+
+  <aside class="legend">
+    <span><i class="pin yes"></i>가능</span>
+    <span><i class="pin no"></i>불가능</span>
+    <span><i class="pin"></i>미확인</span>
+  </aside>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

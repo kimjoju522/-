@@ -1,0 +1,14 @@
+{
+  "name": "bplpay-map",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.45.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
